@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flame/game.dart';
+import 'package:flutter_brick_breaker/src/brick_breaker.dart';
 
 void main() {
-  runApp(const MainApp());
+  final gameFlame = BrickBreaker();
+  runApp(GameWidget(game: gameFlame));
 }
 
-class MainApp extends StatelessWidget {
+/* class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
@@ -17,4 +20,4 @@ class MainApp extends StatelessWidget {
       ),
     );
   }
-}
+} */
