@@ -7,7 +7,7 @@ import 'package:flutter_brick_breaker/src/components/components.dart';
 import 'package:flutter_brick_breaker/src/components/play_area.dart';
 import 'package:flutter_brick_breaker/src/config.dart';
 
-class BrickBreaker extends FlameGame {
+class BrickBreaker extends FlameGame with HasCollisionDetection {
   BrickBreaker()
       : super(
           camera: CameraComponent.withFixedResolution(
