@@ -29,13 +29,14 @@ class BrickBreaker extends FlameGame {
 
     world.add(
       Ball(
+          // cria um objeto Vector2 definido para a mesma direção que a Vector2 original, mas reduzido para uma distância de 1. Isso mantém a velocidade da bola consistente, independentemente da direção
           velocity: Vector2((random.nextDouble() - 0.5) * width, height * 0.2)
               .normalized()
-            ..scale(height / 4),
-          position: size / 2,
+            ..scale(height / 4), // dimensionar um Vector2 por um valor escalar
+          position: size / 2, // reduz pela metade o tamanho do jogo
           radius: ballRadius),
     );
 
-    debugMode = true;
+    debugMode = true; // ativa a tela de depuração
   }
 }
